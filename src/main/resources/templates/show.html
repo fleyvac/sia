@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Sistema de Informacion Academica</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+</head>
+
+<body>
+	<div id="conTable">
+		<h2>Mostrar Cursos</h2><br>
+
+		<form name="CUR" method="post" th:object="${curso}">
+			<div class="mb-3">
+				<label for="Grado" class="form-label">Grado</label>
+				<input type="text" class="form-control" name="Grado" id="Grado" disabled th:value="*{Grado}">
+			</div>
+			<div class="mb-3">
+				<label for="Grupo" class="form-label">Grupo</label>
+				<input type="text" class="form-control" name="Grupo" id="Grupo" disabled th:value="*{Grupo}">
+			</div>
+			<a th:href="@{/sia}"><button type="button" class="btn btn-primary">volver</button></a>
+		</form>
+	</div>
+</body>
+
+</html>
